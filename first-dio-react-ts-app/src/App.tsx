@@ -1,15 +1,21 @@
-import { Card } from './components/Card'
-import { Layout } from './Layout'
+import { Layout } from './components/Layout'
+import { styled } from 'styled-components'
+
+const Box = styled.div`
+  background-color: #ff0;
+`
 
 function App() {
 
   return (
-    <>
       <Layout>
-          <Card title="First Card" text="This is the first card" details="Here are the details for the first card" />
-          <Card title="Second Card" text="I'm the second card" details="There are some details from the second card" />
+        <Box>Faça o Login</Box>
+        <label htmlFor="email">E-mail</label>
+        <input id="email" type="email" />
+        <label htmlFor="password">Senha</label>
+        <input id="password" type="password" />
+        <button>Entrar</button>
       </Layout>
-    </>
   )
 }
 
